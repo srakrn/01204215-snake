@@ -27,6 +27,8 @@ class SnakeWindow(arcade.Window):
     def on_draw(self):
         arcade.start_render()
         self.snake_sprite.draw()
+    def on_key_press(self, key, key_modifiers):
+        self.world.on_key_press(key, key_modifiers)
 
 def main():
     window = SnakeWindow(SCREEN_WIDTH, SCREEN_HEIGHT)
